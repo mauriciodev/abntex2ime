@@ -20,7 +20,8 @@
 % ---
 % Pacotes básicos 
 % ---
-\usepackage{lmodern}		% Usa a fonte Latin Modern			
+\usepackage{lmodern}		% Usa a fonte Latin Modern	
+\usepackage{float}
 \usepackage[T1]{fontenc}	% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}	% Codificacao do documento 
 \usepackage{indentfirst}	% Indenta o primeiro parágrafo de cada seção.
@@ -41,12 +42,17 @@
 % Pacotes de citações
 % ---
 %\usepackage[brazilian,hyperpageref]{backref} % Mostra a página onde cada citação foi feita
-\usepackage[num,abnt-etal-list=0,bibjustif]{./abntex2cite} % Citações numéricas (ordem de apresentação)
+\usepackage[alf,abnt-etal-list=0,bibjustif]{./abntex2cite} % Citações numéricas (ordem de apresentação)
 %\usepackage[alf,abnt-etal-list=0,bibjustif]{./abntex2cite} % Citações autor-data (ordem alfabética)
 
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
+%Adicionados pelo Maj Maurício
+%referência cruzada com página
+\newcommand{\cref}[1]{\ref{#1} (pág. \pageref{#1})}
+%citação autor (ano).
+\newcommand{\citep}[1]{\citeauthor{#1} (\citeyear{#1})}
 
 % % ---
 % % Configurações do pacote backref, SE FOR USAR DESCOMENTE TODO ESSE TRECHO
@@ -114,7 +120,7 @@
 \newcommand{\quadroname}{Quadro}
 \newcommand{\listofquadrosname}{Lista de quadros}
 
-\newfloat[chapter]{quadro}{loq}{\quadroname}
+%\newfloat[chapter]{quadro}{loq}{\quadroname}
 \newlistof{listofquadros}{loq}{\listofquadrosname}
 \newlistentry{quadro}{loq}{0}
 
@@ -170,7 +176,7 @@
 % Folha de rosto
 % (o * indica que haverá a ficha bibliográfica)
 % ---
-\imprimirfolhaderosto*
+%\imprimirfolhaderosto*
 % ---
 
 % ---
@@ -181,17 +187,14 @@
 %     \includepdf{fig_ficha_catalografica.pdf}
 % \end{fichacatalografica}
 
-\imprimirfichacatalografica
+%\imprimirfichacatalografica
 % ---
 
-% ---
+% ---ver
 % Inserir folha de aprovação
 % ---
 
-% \begin{folhadeaprovacao}
-% \includepdf{folhadeaprovacao_final.pdf}
-% \end{folhadeaprovacao}
-%
+
 \imprimirfolhadeaprovacao
 % ---
 
@@ -200,25 +203,25 @@
 % ---
 % inserir lista de ilustrações
 % ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
+%\pdfbookmark[0]{\listfigurename}{lof}
+%\listoffigures*
+%\cleardoublepage
 % ---
 
 % ---
 % inserir lista de quadros
 % ---
-\pdfbookmark[0]{\listofquadrosname}{loq}
-\listofquadros*
-\cleardoublepage
+%\pdfbookmark[0]{\listofquadrosname}{loq}
+%\listofquadros*
+%\cleardoublepage
 % ---
 
 % ---
 % inserir lista de tabelas
 % ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
+%\pdfbookmark[0]{\listtablename}{lot}
+%\listoftables*
+%\cleardoublepage
 % ---
 
 \input{simbolo-abrev}
@@ -244,10 +247,10 @@
 % ----------------------------------------------------------
 \textual
 
-\input{exemplo-intro}
-\input{exemplo-cap-01}
-\input{exemplo-cap-02}
-\input{exemplo-conclusao}
+\input{corpo_texto}
+%\input{exemplo-cap-01}
+%\input{exemplo-cap-02}
+%\input{exemplo-conclusao}
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -265,7 +268,7 @@
 % ----------------------------------------------------------
 \begin{apendicesenv}
     \partapendices
-    \input{exemplo-apendice}
+    %\input{exemplo-apendice}
 \end{apendicesenv}
 % ---
 
@@ -274,7 +277,7 @@
 % ----------------------------------------------------------
 \begin{anexosenv}
     \partanexos
-    \input{exemplo-anexo}
+    %\input{exemplo-anexo}
 \end{anexosenv}
 
 %---------------------------------------------------------------------

@@ -1,22 +1,33 @@
 % ---
 % Dedicatória
 % ---
-\begin{dedicatoria}
-   \vspace*{\fill}
-   \centering
-   \noindent
-   \textit{ Este trabalho é dedicado às crianças adultas que,\\
-   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
-\end{dedicatoria}
+%\begin{dedicatoria}
+%   \vspace*{\fill}
+%   \centering
+%   \noindent
+%   \textit{ Este trabalho é dedicado aos estudantes apaixonados que, apesar das dificuldades, nunca deixaram de acreditar no poder transformador do conhecimento.} \vspace*{\fill}
+%\end{dedicatoria}
 % ---
 
 % ---
 % Agradecimentos
 % ---
 \begin{agradecimentos}
-Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson, Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro projeto abn\TeX\ foram extraídos de \url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que contribuíram para que a produção de trabalhos acadêmicos conforme as normas ABNT com \LaTeX\ fosse possível.
+Primeiramente, gostaríamos de agradecer às nossas famílias, que sempre estiveram
+ao nosso lado, oferecendo amor, incentivo e apoio incondicional. Aos nossos pais, por serem fontes inesgotáveis de inspiração e por nos ensinarem a importância da perseverança.
+Vocês são nossa base e nossa força.
+Ao nossos orientadores Maj Maurício e Cel Marcos, pela orientação meticulosa, paciência e conhecimento compartilhado ao longo deste processo. Seus conselhos e críticas construtivas foram fundamentais para moldar este trabalho.
+Aos amigos que estiveram ao nosso lado, nos motivaram e entenderam nossa ausência
+em tantos momentos importantes. Seus sorrisos e palavras de encorajamento foram o
+combustível que nos impulsionou.
+Agradecemos também a todos os professores e funcionários da instituição, que contribuíram indiretamente para a nossa formação acadêmica.
+Por último, mas não menos importante, agradecemos a todos aqueles que, de uma forma
+ou de outra, nos apoiaram e encorajaram durante este percurso. Cada gesto de carinho,
+cada palavra amiga e cada ato de gentileza foram fundamentais para nossa motivação e
+bem-estar.
+% \footnote{Os nomes dos integrantes do primeiro projeto abn\TeX\ foram extraídos de \url{http://codigolivre.org.br/projects/abntex/}}
 
-Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de Brasília (CPAI), ao grupo de usuários \emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos novos voluntários do grupo \emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e \url{http://www.abntex.net.br/}}~que contribuíram e que ainda contribuirão para a evolução do \abnTeX.
+Agradecimentos especiais são direcionados aos alunos da Engenharia Cartográfica 2024 que compartilharam conosco muitas noites de estudo, debates estimulantes e momentos de desafio e que contribuíram e que sempre irão contribuir para a manuntenção do conhecimento.
 
 \end{agradecimentos}
 % ---
@@ -24,16 +35,14 @@ Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura 
 % ---
 % Epígrafe
 % ---
-\begin{epigrafe}
-    \vspace*{\fill}
-	\begin{flushright}
-		\textit{``Não vos amoldeis às estruturas deste mundo, \\
-		mas transformai-vos pela renovação da mente, \\
-		a fim de distinguir qual é a vontade de Deus: \\
-		o que é bom, o que Lhe é agradável, o que é perfeito.\\
-		(Bíblia Sagrada, Romanos 12, 2)}
-	\end{flushright}
-\end{epigrafe}
+%\begin{epigrafe}
+%    \vspace*{\fill}
+%	\begin{flushright}
+%		\textit{``Conhecimento é a única riqueza que, \\
+%                    quanto mais compartilhada, mais cresce.\\
+%		(Provérbio Chinês)}
+%	\end{flushright}
+%\end{epigrafe}
 % ---
 
 % ---
@@ -44,35 +53,27 @@ Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura 
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 \SingleSpacing
- Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
- objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do
- tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
- resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
+
+% Motivação
+% O que foi feito
+% Quais resultados são esperados ou foram alcançados
+% Breve fechamento dos principais impactos do que foi feito
+
 
  \textbf{Palavras-chave}: \imprimirpalavraschave
 \end{resumo}
 
 % resumo em inglês
 \begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
-%  \linespread{1.3}
+\begin{otherlanguage*}{english}
+\linespread{1.3}
 \SingleSpacing
- Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
- objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do
- tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
- resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
-   This is the english abstract.
-   \vspace{\onelineskip}
- 
-   \noindent 
-   \textbf{Keywords}: \imprimirkeywords
- \end{otherlanguage*}
+% Usem o DeepL no resumo e corrijam.
+This part will be written by the VF.
+
+%This is the english abstract.
+\vspace{\onelineskip}
+\noindent 
+\textbf{Keywords}: \imprimirkeywords
+\end{otherlanguage*}
 \end{resumo}
